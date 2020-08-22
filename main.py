@@ -9,7 +9,13 @@ def main():
     "2-Archivo XML\n"+
     "3-Archivo CSV\n\n")
     arg = input()
-    switch(arg)
+    if not arg:
+        print("Elija una opción")
+        input("Presione cualquier tecla para continuar..")
+        os.system('cls')
+        main()
+    else:
+        switch(arg)
 
 def Json():
     print("Ingrese una ubicación de archivo Ej: C:\\Usuario\\Archivo.json")
@@ -96,8 +102,14 @@ def switch(arg):
         '2': Xml,
         '3': Csv
     }
-    func = switcher.get(arg, lambda: "Opción Invalida")
-    return func()
+    if arg not in switcher:
+        print("Opción Invalida.")
+        input("Presione cualquier tecla para continuar..")
+        os.system('cls')
+        main()
+    else:
+        func = switcher.get(arg, lambda: "Opción Invalida")
+        return func()
     
 if __name__ == "__main__":
     main()
