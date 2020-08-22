@@ -1,0 +1,26 @@
+<data>
+    <persona>
+        <nombre>Dennis</nombre>
+        <edad>20</edad>
+        <estudiante>True</estudiante>
+        <facultad>Ingenieria</facultad>
+    </persona>
+    <persona>
+        <nombre>Luis</nombre>
+        <edad>25</edad>
+        <estudiante>True</estudiante>
+        <facultad>Medicina</facultad>
+    </persona>
+    <persona>
+        <nombre>Renee</nombre>
+        <edad>20</edad>
+        <estudiante>True</estudiante>
+        <facultad>Ingenieria</facultad>
+    </persona>
+    <persona>
+        <nombre>Sebastian</nombre>
+        <edad>21</edad>
+        <estudiante>True</estudiante>
+        <facultad>Derecho</facultad>
+    </persona>
+</data>
