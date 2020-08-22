@@ -1,5 +1,6 @@
 import JsonReader
 import XmlReader
+import CsvReader
 import os
 
 def main():
@@ -65,7 +66,29 @@ def Xml():
         main()
 
 def Csv():
-    input("Csv")
+    print("Ingrese una ubicación de archivo Ej: C:\\Usuario\\Archivo.csv")
+    path = input()
+    if not path:
+        print("Debe ingresar una ubicación de archivo.")
+        input("Presione cualquier tecla para continuar..")
+        os.system('cls')
+        main()
+    elif not path.endswith('.csv'):
+        print("Debe elegir un archivo con extensión .csv")
+        input("Presione cualquier tecla para continuar..")
+        os.system('cls')
+        main()
+    elif not os.path.exists(path):
+        print("El archivo no existe.")
+        input("Presione cualquier tecla para continuar..")
+        os.system('cls')
+        main()    
+    else:
+        csvread = CsvReader.CsvReader(path)
+        csvread.fileReader()
+        input("Presione cualquier tecla para continuar..")
+        os.system('cls')
+        main()
 
 def switch(arg):
     switcher={
